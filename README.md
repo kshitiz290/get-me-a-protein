@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Crowdfunding Platform - Next.js
 
-## Getting Started
+Welcome to the **Crowdfunding Platform** built with **Next.js**! This is a modern web application that allows users to create, manage, and contribute to crowdfunding campaigns. Whether you are a creator looking to fund a project or a supporter wanting to contribute, this platform makes it easy and secure.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **User Authentication**: Users can sign up, log in, and manage their accounts.
+- **Campaign Creation**: Creators can launch new crowdfunding campaigns with details like goals, descriptions, and rewards.
+- **Campaign Browsing**: Supporters can browse and filter through various live campaigns.
+- **Contribution System**: Supporters can contribute to campaigns via secure payment gateways.
+- **Responsive Design**: Fully responsive UI optimized for both desktop and mobile.
+- **Contributors List**: Top 10 contributors will be shown.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Next.js**: React framework for server-side rendering, static site generation, and building modern web apps.
+- **React**: JavaScript library for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for fast UI development.
+- **MongoDB**: NoSQL database for storing campaign and user data.
+- **Razorpay**: Payment gateway integration for secure transactions.
+- **NextAuth** : For Authorization and Authentication.
