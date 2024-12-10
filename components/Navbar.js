@@ -11,13 +11,6 @@ const Navbar = () => {
     <nav className='flex justify-between items-center px-8 md:h-16 flex-col md:flex-row bg-gray-900  text-white'>
       <Link href={"/"} className='font-bold text-lg flex justify-center items-center gap-2'>GetMeaProtein
       </Link>
-      {/* <ul classNameName='flex justify-between gap-4'>
-        <li>Home</li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>SignUp</li>
-        <li>Login</li>
-      </ul> */}
       <div className='position'>
         {session && <>
 

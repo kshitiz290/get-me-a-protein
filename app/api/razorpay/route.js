@@ -21,7 +21,7 @@ export const POST = async (req) =>{
 
     if(xx){
         let updatedPayment = await Payment.findOneAndUpdate({pid:body.razorpay_order_id},{done:true},{new:true});
-        return NextResponse.redirect(`http://localhost:3000/${updatedPayment.to_user}?paymentDone=true`)
+        return NextResponse.redirect(`https://get-me-a-protein.vercel.app/${updatedPayment.to_user}?paymentDone=true`)
     }
     else{
         return NextResponse.json({success:false,message:"Payment Verification failed"});

@@ -62,7 +62,7 @@ const PaymentPage = ({ username }) => {
             "description": "Test Transaction",
             "image": "https://example.com/your_logo",
             "order_id": orderid, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-            "callback_url": "http://localhost:3000/api/razorpay",
+            "callback_url": "https://get-me-a-protein.vercel.app/api/razorpay",
             "prefill": {
                 "name": "Gaurav Kumar",
                 "email": "gaurav.kumar@example.com",
@@ -130,12 +130,13 @@ const PaymentPage = ({ username }) => {
                         <div className='text-white'>
                             <input type="text" name="amount" value={paymentForm.amount} onChange={handleChange} className='rounded-lg w-full bg-slate-700 p-1 px-2 border-1 mb-1' placeholder='Enter Amount' />
                         </div>
-                        <button onClick={() => pay(Number.parseInt(paymentForm.amount) * 100)} className='bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 p-1 w-1/2 md:w-full border-1 rounded-lg font-bold disabled:bg-slate-500 disabled:from-purple-100 ' disabled={paymentForm.name?.length < 3 || paymentForm.message?.length < 4 || paymentForm.amount?.length < 1}>Pay</button>
+                        <button onClick={() => pay(Number.parseInt(paymentForm.amount) * 100)} className='bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 p-1 w-1/2 md:w-full border-1 rounded-lg font-bold disabled:bg-slate-500 disabled:from-purple-100' disabled={paymentForm.name?.length < 3 || paymentForm.message?.length < 4 || paymentForm.amount?.length < 1}>Pay</button>
                     </div>
                     <div className="buttons flex gap-4 md:gap-2 mt-4">
-                        <button className='md:p-2 p-1 rounded-md bg-slate-700 font-bold ' onClick={() => pay(1000)}>Pay ₹10</button>
-                        <button className='md:p-2 p-1 rounded-md bg-slate-700 font-bold' onClick={() => pay(2000)}>Pay ₹20</button>
-                        <button className='md:p-2 p-1 rounded-md bg-slate-700 font-bold' onClick={() => pay(3000)}>Pay ₹30</button>
+                        <button className='md:p-2 p-1 rounded-md bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-bold disabled:bg-slate-500 disabled:from-purple-100'
+                        disabled={paymentForm.name?.length < 3 || paymentForm.message?.length < 4} onClick={() => pay(1000)}>Pay ₹10</button>
+                        <button className='md:p-2 p-1 rounded-md bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-bold disabled:bg-slate-500 disabled:from-purple-100' disabled={paymentForm.name?.length < 3 || paymentForm.message?.length < 4}onClick={() => pay(2000)}>Pay ₹20</button>
+                        <button className='md:p-2 p-1 rounded-md bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-bold disabled:bg-slate-500 disabled:from-purple-100' disabled={paymentForm.name?.length < 3 || paymentForm.message?.length < 4 } onClick={() => pay(3000)}>Pay ₹30</button>
                     </div>
                 </div>
                 <div className="supporter w-full md:w-1/2 rounded-lg bg-slate-900 p-8">

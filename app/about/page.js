@@ -24,7 +24,6 @@ const About = () => {
             </p>
           </div>
           <div className="flex justify-center">
-            {/* <img src="/images/mission-image.jpg" alt="Our Mission" className="w-full h-auto rounded-lg shadow-lg" /> */}
           </div>
         </section>
 
