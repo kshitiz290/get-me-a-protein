@@ -17,5 +17,5 @@ Welcome to the **Crowdfunding Platform** built with **Next.js**! This is a moder
 - **React**: JavaScript library for building user interfaces.
 - **Tailwind CSS**: Utility-first CSS framework for fast UI development.
 - **MongoDB**: NoSQL database for storing campaign and user data.
-- **Razorpay**: Payment gateway integration for secure transactions.
+- **Razorpay**: Payment gateway integration for secure transactions.(Only Dummy Transactions currently..)
 - **NextAuth** : For Authorization and Authentication.
