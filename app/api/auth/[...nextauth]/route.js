@@ -52,7 +52,6 @@ const authOptions = NextAuth({
         if(!currUser){
           const newUser = await User.create({
             email:user.email,
-            password:"",
             username:user.email.split("@")[0],
           })
         }
@@ -63,7 +62,6 @@ const authOptions = NextAuth({
         if(!currUser){
           const newUser = await User.create({
             email:user.email,
-            password:"",
             username:user.email.split("@")[0],
           })
         }
@@ -74,7 +72,6 @@ const authOptions = NextAuth({
         if(!currUser){
           const newUser = await User.create({
             email:user.email,
-            password:"",
             username:user.email.split("@")[0],
           })
         }

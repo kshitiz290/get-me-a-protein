@@ -52,10 +52,23 @@ const PaymentPage = ({ username }) => {
     }
 
     let pay = async (amount) => {
+        if(!user.razorpayid){
+            toast.error('RazorPay Credentials Needed!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            });
+        }else{
         let a = await initiate(amount, username, paymentForm)
         let orderid = a.id
         var options = {
-            "key": process.env.RAZORPAY_ID, // Enter the Key ID generated from the Dashboard
+            "key": user.razorpayid, // Enter the Key ID generated from the Dashboard
             "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
             "currency": "INR",
             "name": "Get Me a Protein",
@@ -77,6 +90,7 @@ const PaymentPage = ({ username }) => {
         };
         let rzp1 = new window.Razorpay(options)
         rzp1.open();
+    }
     }
     if (!user) {
         return <div className='text-white text-center mt-4 '>NO USER FOUND 🙄</div>

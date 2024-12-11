@@ -24,8 +24,13 @@ const Dashboard = () => {
     }, [session])
 
     let getData = async () => {
+
         let u = await fetchUser(session.user.name)
+        if(!u.password){
+            setform(u)
+        }else{
         setform({...u,password:"***********"});
+        }
     }
 
     let handleChange = (e) => {
